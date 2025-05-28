@@ -14,9 +14,7 @@ public static class TreeHelper
     {
         if (tree == null) return null;
 
-        var temp = tree.Left;
-        tree.Left = Swap(tree.Right);
-        tree.Right = Swap(temp);
+        (tree.Left, tree.Right) = (Swap(tree.Right), Swap(tree.Left));
 
         return tree;
     }

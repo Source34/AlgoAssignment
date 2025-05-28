@@ -20,9 +20,9 @@ public class TreeHelperTests
         var node = new Node(1);
         var result = TreeHelper.Swap(node);
 
-        Assert.Equal(1, result?.Value);
-        Assert.Null(result?.Left);
-        Assert.Null(result?.Right);
+        Assert.Equal(1, result.Value);
+        Assert.Null(result.Left);
+        Assert.Null(result.Right);
     }
 
     [Fact]
@@ -36,9 +36,9 @@ public class TreeHelperTests
 
         var result = TreeHelper.Swap(tree);
 
-        Assert.Equal(1, result?.Value);
-        Assert.Equal(3, result?.Left?.Value);
-        Assert.Equal(2, result?.Right?.Value);
+        Assert.Equal(1, result.Value);
+        Assert.Equal(3, result.Left.Value);
+        Assert.Equal(2, result.Right.Value);
     }
 
     [Fact]
@@ -60,13 +60,13 @@ public class TreeHelperTests
 
         var result = TreeHelper.Swap(tree);
 
-        Assert.Equal(1, result?.Value);
-        Assert.Equal(3, result?.Left?.Value);
-        Assert.Equal(7, result?.Left?.Left?.Value);
-        Assert.Equal(6, result?.Left?.Right?.Value);
+        Assert.Equal(1, result.Value);
+        Assert.Equal(3, result.Left.Value);
+        Assert.Equal(7, result.Left.Left.Value);
+        Assert.Equal(6, result.Left.Right.Value);
 
-        Assert.Equal(2, result?.Right?.Value);
-        Assert.Equal(5, result?.Right?.Left?.Value);
-        Assert.Equal(4, result?.Right?.Right?.Value);
+        Assert.Equal(2, result.Right.Value);
+        Assert.Equal(5, result.Right.Left.Value);
+        Assert.Equal(4, result.Right.Right.Value);
     }
 }
