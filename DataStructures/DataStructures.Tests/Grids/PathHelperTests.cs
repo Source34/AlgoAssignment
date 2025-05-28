@@ -26,6 +26,8 @@ public class PathHelperTests
     [InlineData(0, 5)]
     [InlineData(3, 0)]
     [InlineData(-1, 4)]
+    [InlineData(4, -1)]
+    [InlineData(-3, -2)]
     public void GetPathCount_InvalidInputs_ReturnsZero(int m, int n)
     {
         int result = PathHelper.GetPathCount(m, n);
